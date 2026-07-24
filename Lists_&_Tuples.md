@@ -1,6 +1,6 @@
 # Lists & Tuples
 
-## 1. Lists — the workhorse of Python DSA
+## Lists — the workhorse of Python DSA
 
 ```python
 lst = [1, 2, 3, "four", 5.0]   # can hold mixed types
