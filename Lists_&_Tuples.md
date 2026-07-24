@@ -207,9 +207,9 @@ Think of a list as a **toy box** with toys inside it.
 toybox = ["car", "ball", "doll"]
 ```
 
-## Shallow Copy — Making a copy of the BOX, but not the toys
+Shallow Copy — Making a copy of the BOX, but not the toys
 
-Imagine you have a toy box, and you make a brand new box, and then you put the *exact same toys* inside it (not new toys — the same physical toys, just placed in a second box).
+#### Imagine you have a toy box, and you make a brand new box, and then you put the *exact same toys* inside it (not new toys — the same physical toys, just placed in a second box).
 
 ```python
 toybox = ["car", "ball", "doll"]
@@ -292,4 +292,112 @@ b[0][0] = 99
 print(a[0][0])   # what does this print?
 ```
 
-Ready to move to **Point 5: Dictionaries & Sets**, or want the README saved for Lists & Tuples first?
+## What is a lambda function?
+
+A **lambda** is a tiny, throwaway function you write in a single line, without giving it a name using `def`. It's meant for quick, simple operations you'll use once (or pass into another function) — not for anything complex.
+
+```python
+# Normal function
+def square(x):
+    return x ** 2
+
+# Same thing as a lambda
+square = lambda x: x ** 2
+
+square(5)   # 25
+```
+
+**Syntax:**
+```python
+lambda arguments: expression
+```
+- No `return` keyword — the expression's result is automatically returned.
+- Can take any number of arguments, but only **one expression** (no multi-line logic, no loops, no `if/else` blocks — just one expression).
+
+```python
+add = lambda a, b: a + b
+add(3, 4)   # 7
+
+is_even = lambda x: x % 2 == 0
+is_even(4)  # True
+```
+
+**Now, what if you want something more custom than a built-in function like `len`?** That's exactly where lambda comes in — you write a tiny custom function inline, right there in the `key` argument, instead of separately defining one with `def`.
+
+```python
+words = ["banana", "kiwi", "apple"]
+
+# Sort by the LAST character of each word
+sorted(words, key=lambda w: w[-1])
+```
+
+Walking through what happens:
+1. Python takes each word one at a time
+2. For each word `w`, it runs `lambda w: w[-1]` → gives back the last character
+3. Python sorts the words based on those last characters, not the words themselves
+
+## The "why not just use def?" question
+
+You *could* write this instead:
+```python
+def last_char(w):
+    return w[-1]
+
+sorted(words, key=last_char)
+```
+
+Both do the exact same thing. But lambda saves you the trouble of naming and defining a whole function just to use it once, right in that one line. It's a shortcut for simple, single-use logic.
+
+## More sorting examples with lambda
+
+```python
+students = [("Sam", 85), ("Ana", 92), ("Ravi", 78)]
+
+# Sort by score (2nd item in each tuple)
+sorted(students, key=lambda s: s[1])
+# [('Ravi', 78), ('Sam', 85), ('Ana', 92)]
+
+# Sort by score, highest first
+sorted(students, key=lambda s: s[1], reverse=True)
+# [('Ana', 92), ('Sam', 85), ('Ravi', 78)]
+
+# Sort by name length
+sorted(students, key=lambda s: len(s[0]))
+
+# Sort a list of dicts by a specific field
+people = [{"name": "Sam", "age": 25}, {"name": "Ana", "age": 22}]
+sorted(people, key=lambda p: p["age"])
+```
+
+## What's actually happening conceptually
+
+Think of `key=lambda x: ...` as saying: **"Before comparing two items to decide their order, first run them through this tiny function, and compare the results instead of the raw items."**
+
+```python
+nums = [-5, 3, -2, 8, -1]
+
+# Sort by absolute value, ignoring sign
+sorted(nums, key=lambda x: abs(x))
+# [-1, -2, 3, -5, 8]
+```
+
+Here, Python doesn't compare `-5` and `3` directly — it compares `abs(-5)=5` and `abs(3)=3`, and orders based on that.
+
+## Where else lambda shows up (quick mention)
+
+```python
+# map() — apply a function to every item
+list(map(lambda x: x**2, [1,2,3]))     # [1, 4, 9]
+
+# filter() — keep items where lambda returns True
+list(filter(lambda x: x % 2 == 0, [1,2,3,4]))   # [2, 4]
+```
+
+---
+
+Quick check for you:
+```python
+words = ["dog", "elephant", "cat", "fox"]
+result = sorted(words, key=lambda w: len(w))
+print(result)
+```
