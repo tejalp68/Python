@@ -98,7 +98,7 @@ shallow[0].append(99)
 print(nested)   # [[1, 2, 99], [3, 4]] — inner lists still shared!
 ```
 
-## 2. Tuples — the immutable sibling
+## Tuples — the immutable sibling
 
 ```python
 t = (1, 2, 3)
