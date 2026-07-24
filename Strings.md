@@ -12,12 +12,15 @@ s[0] = "h"   # TypeError: 'str' object does not support item assignment
 ## 2. Creating strings
 
 ```python
-s1 = 'single quotes'
-s2 = "double quotes"
-s3 = '''triple quotes
+s1 = 'single quotes'  
+s2 = "double quotes"    
+s3 = '''triple quotes    
 spans multiple lines'''
 s4 = "It's a \"quote\""     # escaping
 s5 = r"raw\nstring"          # raw string — \n stays literal, not a newline
+
+#throws error when same quote is use inside it
+thats why escaping is used ("It's a \"quote\"" )
 ```
 
 ## 3. Indexing & Slicing (core DSA skill)
