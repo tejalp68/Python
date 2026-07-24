@@ -55,9 +55,9 @@ So `s[::-1]` effectively means: "start at the last element, and walk backward to
 ```python
 s.lower()        # "hello world"
 s.upper()        # "HELLO WORLD"
-s.title()        # "Hello World"
-s.capitalize()   # "Hello world"
-s.swapcase()     # "hELLO wORLD"
+s.title()        # "Hello World"  # capitalize first character of each word
+s.capitalize()   # "Hello world"  # capitalize only first character of first word
+s.swapcase()     # "hELLO wORLD"  # converts all uppercase characters in a string to lowercase and all lowercase characters to uppercase.
 ```
 
 **Whitespace/cleanup:**
@@ -65,6 +65,10 @@ s.swapcase()     # "hELLO wORLD"
 "  hi  ".strip()    # "hi"   — both sides
 "  hi  ".lstrip()   # "hi  " — left only
 "  hi  ".rstrip()   # "  hi" — right only
+#EX.
+str = "299$"
+str1 = str.rstrip("$")
+print(str) ----> 299
 ```
 
 **Searching:**
