@@ -146,7 +146,7 @@ def get_stats():
 x, y, z = get_stats()
 ```
 
-## 3. List vs Tuple — the interview summary table
+## List vs Tuple — the interview summary table
 
 | Feature | List | Tuple |
 |---|---|---|
