@@ -197,5 +197,99 @@ t = (1, 2, 3)
 x, *y = t
 print(y)
 ```
+#### Shallow Copy And Deep copy
 
-Want the README for this one, or move to **Point 5: Dictionaries & Sets**?
+## Imagine you have a toy box
+
+Think of a list as a **toy box** with toys inside it.
+
+```python
+toybox = ["car", "ball", "doll"]
+```
+
+## Shallow Copy — Making a copy of the BOX, but not the toys
+
+Imagine you have a toy box, and you make a brand new box, and then you put the *exact same toys* inside it (not new toys — the same physical toys, just placed in a second box).
+
+```python
+toybox = ["car", "ball", "doll"]
+new_box = toybox.copy()   # or toybox[:]
+```
+
+Now you have **two boxes**, but they hold the **same toys**.
+
+If you add a new toy to `new_box`, it doesn't affect `toybox` — because the boxes themselves are different:
+```python
+new_box.append("teddy bear")
+print(toybox)    # ["car", "ball", "doll"]  — unaffected!
+print(new_box)   # ["car", "ball", "doll", "teddy bear"]
+```
+
+That part works like you'd expect. **But here's the catch** — what if one of the "toys" is itself a small box (a nested list)?
+
+```python
+toybox = ["car", ["small", "toys"]]
+new_box = toybox.copy()
+```
+
+Now `new_box` has its own big box, but the **small box inside is literally the SAME small box** — not a copy of it! If you open the small box in `new_box` and add something:
+
+```python
+new_box[1].append("marble")
+print(toybox)    # ["car", ["small", "toys", "marble"]]  — CHANGED! 
+print(new_box)   # ["car", ["small", "toys", "marble"]]
+```
+
+Both boxes show the change — because they were sharing that one small inner box the whole time. **A shallow copy only copies the outer box, not what's inside if it's another container.**
+
+## Deep Copy — Making a copy of EVERYTHING, even the toys inside boxes inside boxes
+
+A deep copy says: "Copy the big box, AND copy every single toy inside it, AND if a toy is itself a box, copy that box too, and everything inside THAT."
+
+```python
+import copy
+
+toybox = ["car", ["small", "toys"]]
+new_box = copy.deepcopy(toybox)
+
+new_box[1].append("marble")
+print(toybox)    # ["car", ["small", "toys"]]        — unaffected!
+print(new_box)   # ["car", ["small", "toys", "marble"]]
+```
+
+Now the two boxes are **completely independent**. Nothing you do to one ever affects the other, no matter how deep the nesting goes.
+
+## The simple rule to remember
+
+- **Shallow copy** = new outer box, same inner boxes (shared)
+- **Deep copy** = new outer box, AND new inner boxes too (fully separate)
+
+```python
+a = [1, [2, 3]]
+
+b = a.copy()              # shallow — b[1] is the SAME list as a[1]
+c = copy.deepcopy(a)       # deep — c[1] is a totally NEW list
+
+b[1].append(99)
+print(a)   # [1, [2, 3, 99]]  — changed because b[1] and a[1] are the same list
+
+c[1].append(100)
+print(a)   # [1, [2, 3, 99]]  — unaffected, c is fully independent
+```
+
+## When do you need which?
+
+- If your list only has simple things (numbers, strings) → shallow copy (`.copy()` or `[:]`) is enough, since there's nothing nested to worry about.
+- If your list has lists inside lists (or dicts inside lists, etc.) → use `deepcopy()` if you need them to be truly independent.
+
+---
+
+Quick check for you:
+```python
+a = [[1, 2], [3, 4]]
+b = a.copy()
+b[0][0] = 99
+print(a[0][0])   # what does this print?
+```
+
+Ready to move to **Point 5: Dictionaries & Sets**, or want the README saved for Lists & Tuples first?
