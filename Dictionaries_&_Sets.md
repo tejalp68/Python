@@ -1,6 +1,6 @@
 # Dictionaries & Sets
 
-## PART 1: Dictionaries
+## Dictionaries
 
 ### What a dictionary is
 
@@ -141,7 +141,7 @@ for w in words:
 
 ---
 
-## PART 2: Sets
+## Sets
 
 ### What a set is
 
@@ -253,5 +253,3 @@ for ch in "hello":
     d[ch] += 1
 print(dict(d))
 ```
-
-Want the README saved for Dictionaries & Sets, or move on to **Point 6: Conditionals**?
