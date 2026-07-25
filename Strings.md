@@ -94,6 +94,7 @@ s.endswith("ld")
 s.replace("World", "Python")     # replaces ALL occurrences
 s.replace("o", "0", 1)            # replace only first occurrence
 ```
+right
 
 **Checks (return bool — great for validation logic):**
 ```python
