@@ -64,7 +64,7 @@ else:
     print("not positive")
 ```
 
-## 5. Multiple conditions with `and` / `or`
+## Multiple conditions with `and` / `or`
 
 ```python
 age = 25
@@ -124,7 +124,7 @@ if data:               # True if non-empty
     print("has data")
 ```
 
-## 9. `match` statement — Python's version of switch/case (3.10+, worth knowing)
+## `match` statement — Python's version of switch/case (3.10+, worth knowing)
 
 ```python
 day = 3
@@ -151,7 +151,7 @@ match day:
 
 This is newer and less universally expected in interviews than if/elif, but good to mention you know it.
 
-## 10. Common conditional gotchas (interview traps)
+## Common conditional gotchas (interview traps)
 
 ```python
 # Assignment vs comparison — Python actually prevents this mistake (unlike C)
