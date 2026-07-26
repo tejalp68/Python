@@ -1,6 +1,6 @@
-## Point 6: Conditionals
+# Conditionals
 
-## 1. Basic if / elif / else
+## Basic if / elif / else
 
 ```python
 age = 20
@@ -17,14 +17,14 @@ else:
 - `elif` is Python's version of "else if" — you can chain as many as you want.
 - `else` is optional and only runs if nothing above matched.
 
-## 2. One-line if (no else)
+## One-line if (no else)
 
 ```python
 if age > 18: print("adult")
 ```
 Works, but not commonly used in real code — mentioned for completeness.
 
-## 3. Ternary (Conditional) Expression — very commonly tested
+## Ternary (Conditional) Expression — very commonly tested
 
 ```python
 age = 20
@@ -50,7 +50,7 @@ Can be nested (use sparingly, gets unreadable fast):
 category = "child" if age < 13 else "teen" if age < 20 else "adult"
 ```
 
-## 4. Nested conditionals
+## Nested conditionals
 
 ```python
 num = 15
