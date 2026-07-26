@@ -77,7 +77,7 @@ if age < 13 or age > 65:
     print("discount applies")
 ```
 
-## 6. Chained comparisons (Python-specific shortcut)
+## Chained comparisons (Python-specific shortcut)
 
 ```python
 x = 15
@@ -91,7 +91,7 @@ if 10 < x < 20:
     print("in range")
 ```
 
-## 7. `in` for membership checks inside conditionals
+## `in` for membership checks inside conditionals
 
 ```python
 fruit = "apple"
@@ -106,7 +106,7 @@ if char in vowels:
     print("vowel")
 ```
 
-## 8. Using truthy/falsy directly (Pythonic style — revisit from earlier)
+## Using truthy/falsy directly (Pythonic style — revisit from earlier)
 
 ```python
 name = ""
