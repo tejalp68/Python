@@ -22,7 +22,7 @@ else:
 ```python
 if age > 18: print("adult")
 ```
-Works, but not commonly used in real code — mentioned for completeness.
+Works, but not commonly used in real code mentioned for completeness.
 
 ## Ternary (Conditional) Expression — very commonly tested
 
@@ -46,6 +46,7 @@ status = "adult" if age >= 18 else "minor"
 ```
 
 Can be nested (use sparingly, gets unreadable fast):
+
 ```python
 category = "child" if age < 13 else "teen" if age < 20 else "adult"
 ```
