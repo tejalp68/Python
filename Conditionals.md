@@ -191,5 +191,3 @@ if not name:
 y = 15
 print(10 < y < 20 and y != 15)
 ```
-
-Want the README saved for Conditionals, or move on to **Point 7: Loops**?
