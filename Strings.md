@@ -1,5 +1,5 @@
 # Strings
-
+ 
 ## 1. What strings are in Python
 
 Strings are **immutable sequences of characters**. Any "modification" actually creates a new string object.
