@@ -90,6 +90,11 @@ s.endswith("ld")
 ",".join(["a","b","c"])      # "a,b,c" , "a-b-c"
 "".join(['a','p','p','l','e'])        # "apple"  — common way to build a string from a list of chars
 ```
+**Sorting** 
+```python
+sorted("dcba")    #---> returns list of soretd letters
+
+```
 
 **Replacing:**
 ```python
@@ -111,7 +116,7 @@ right
 ## 5. String Formatting — 3 ways (know all 3, f-strings preferred)
 
 ```python
-name, age = "Sam", 25
+name, age = "Sam", 25   #%s =placeholder for string ,%d =placeholder for digit
 
 # 1. % formatting (old style, still appears in legacy code)
 "%s is %d years old" % (name, age)
@@ -121,10 +126,27 @@ name, age = "Sam", 25
 "{0} is {1}".format(name, age)   # positional
 
 # 3. f-strings (modern, fastest, preferred)
-f"{name} is {age} years old"
-f"{3.14159:.2f}"        # "3.14" — 2 decimal places
-f"{1000000:,}"           # "1,000,000" — thousands separator
-f"{name!r}"                # repr() version, adds quotes: 'Sam'
+"                # repr() version, adds quotes: 'Sam'
+
+#Format Specifiers
+Specifier	Meaning
+%s	        String
+%d        	Integer (decimal)
+%f        	Floating point number
+%x	        Hexadecimal (lowercase)
+%X	        Hexadecimal (uppercase)
+%o        	Octal
+%e        	Scientific notation (lowercase e)
+%c	        Single character
+%%	        A literal % sign
+
+print("Value: %f" % 3.14159)     # Value: 3.141590
+print("Hex: %x" % 255)           # Hex: ff
+print("Octal: %o" % 8)           # Octal: 10
+print("Percent: %d%%" % 50)      # Percent: 50%
+
+print("%.2f" % 3.14159)   # 3.14  (2 decimal places)
+print("%5d" % 3)          # "    3"  (padded to width 5) added to the fifth place
 ```
 
 ## 6. String Concatenation & Repetition
@@ -154,18 +176,18 @@ from collections import Counter
 Counter("aabbbc")   # Counter({'b': 3, 'a': 2, 'c': 1})
 
 # Check anagram
-sorted("listen") == sorted("silent")   # True
+sorted("listen") == sorted("silent")   # True   ## both strings uses the same character with same length
 
 # Remove duplicates while preserving order
-list(dict.fromkeys("aabbcc"))    # ['a', 'b', 'c']
+list(dict.fromkeys("aabbcc"))    # ['a', 'b', 'c']  #extracts key from dict
 
 # Convert string <-> list of chars
 list("hello")          # ['h','e','l','l','o']
 "".join(['h','e','l','l','o'])   # 'hello'
 
 # Convert string <-> ASCII
-ord('a')     # 97
-chr(97)      # 'a'
+ord('a')     # 97    only takes one argument
+chr(97)      # 'a'   # also takes only one argument
 ```
 
 ## 8. String Comparison
@@ -179,13 +201,34 @@ Strings compare lexicographically (character by character, using ASCII/Unicode v
 
 **Gotcha:** comparing numeric strings compares character-by-character, not by value — a classic interview trap.
 
+
+**Common escape sequences in Python:**
+|  Escape  |  Meaning  |
+|----------|-----------|
+|\n	|Newline (line break)
+|\t	|Tab (horizontal space)
+|\\	|Literal backslash \
+|\'	|Single quote '
+|\"	|Double quote "
+|\r	|Carriage return
+|\b	|Backspace
+|\f	|Form feed
+|\v	|Vertical tab
+|\0	|Null character
+|\a	|Bell/alert sound
+|\N{name}	|Unicode character by name
+|\uXXXX	|Unicode character (4 hex digits)
+|\UXXXXXXXX	|Unicode character (8 hex digits)
+|\xXX	|Character by hex value (2 hex digits)
+
+
 ---
 
 ### Quick check
 What do these print?
 ```python
-print("Hello"[1:4])
-print("abc" * 2)
+print("Hello"[1:4])  #can directly write the string value in print and still get the same value
+print("abc" * 2)   ----> abcabc
 print(sorted("dcba"))
 print("  Hi  ".strip().lower())
 ```
