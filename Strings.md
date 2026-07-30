@@ -75,6 +75,8 @@ print(str) ----> 299
 ```python
 s.find("World")     # 6 (index) or -1 if not found — doesn't raise error
 s.index("World")    # 6 (index) or raises ValueError if not found
+#returns the index (position) where it first starts — counting from 0.
+#thats why it return 0 for hello and 6 for world
 s.count("o")        # 2 — number of occurrences
 s.startswith("Hello")
 s.endswith("ld")
