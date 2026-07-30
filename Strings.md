@@ -93,7 +93,6 @@ s.endswith("ld")
 **Sorting** 
 ```python
 sorted("dcba")    #---> returns list of soretd letters
-
 ```
 
 **Replacing:**
