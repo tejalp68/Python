@@ -221,7 +221,98 @@ Strings compare lexicographically (character by character, using ASCII/Unicode v
 |\UXXXXXXXX	|Unicode character (8 hex digits)
 |\xXX	|Character by hex value (2 hex digits)
 
+```python
 
+### Examples:
+
+**`\n` — newline:**
+```python
+print("Hello\nWorld")
+```
+Output:
+```
+Hello
+World
+```
+
+**`\t` — tab:**
+```python
+print("Name:\tAlice")
+```
+Output:
+```
+Name:	Alice
+```
+
+**`\\` — literal backslash:**
+```python
+print("C:\\Users\\Alice")
+```
+Output:
+```
+C:\Users\Alice
+```
+
+**`\'` and `\"` — quotes inside strings:**
+```python
+print('It\'s sunny today')
+print("She said \"hello\"")
+```
+Output:
+```
+It's sunny today
+She said "hello"
+```
+
+**`\r` — carriage return (moves cursor to line start):**
+```python
+print("Hello\rWorld")
+```
+Output:
+```
+World
+```
+(`World` overwrites `Hello` because `\r` returns the cursor to the start of the line — mostly noticeable in terminals/live progress bars, not always in simple print output.)
+
+**`\a` — bell (produces a beep sound on some systems):**
+```python
+print("Alert!\a")
+```
+
+**`\xXX` — hex character code:**
+```python
+print("\x48\x69")   # Hi
+```
+
+**`\uXXXX` — unicode character:**
+```python
+print("\u2764")   # ❤
+```
+
+---
+
+## Raw strings (avoiding escape sequences)
+
+Sometimes you *don't* want `\n`, `\t`, etc. to be interpreted — especially with file paths or regex. Use a **raw string** by prefixing with `r`:
+
+```python
+path = r"C:\Users\Alice\notes.txt"
+print(path)
+```
+Output:
+```
+C:\Users\Alice\notes.txt
+```
+
+Without the `r`, `\n` and `\t` inside the path would be misinterpreted as newline/tab characters, breaking the path.
+
+---
+
+### Quick summary:
+- Escape sequences let you insert special/invisible characters (`\n`, `\t`) or literal characters that would otherwise conflict with string syntax (`\'`, `\"`, `\\`).
+- Use `\u` / `\x` / `\N{}` for inserting specific Unicode characters.
+- Use raw strings (`r"..."`) when you want backslashes treated literally.
+  
 ---
 
 ### Quick check
@@ -229,6 +320,6 @@ What do these print?
 ```python
 print("Hello"[1:4])  #can directly write the string value in print and still get the same value
 print("abc" * 2)   ----> abcabc
-print(sorted("dcba"))
-print("  Hi  ".strip().lower())
+print(sorted("dcba")) ----->['a','b','c','d']
+print("  Hi  ".strip().lower()) ---> hi
 ```
