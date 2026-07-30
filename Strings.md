@@ -84,11 +84,11 @@ s.endswith("ld")
 
 **Splitting & Joining (very common in interviews):**
 ```python
-"a,b,c".split(",")        # ['a', 'b', 'c']
+"a,b,c".split(",")        # ['a', 'b', 'c']   auto creates a list to store it in somewhere we have to store it in a variable and type of that variable will be list
 "hello world".split()      # ['hello', 'world']  — splits on any whitespace
 "a  b   c".split()          # ['a', 'b', 'c']    — collapses extra spaces
-",".join(["a","b","c"])      # "a,b,c"
-"".join(["a","b","c"])        # "abc"  — common way to build a string from a list of chars
+",".join(["a","b","c"])      # "a,b,c" , "a-b-c"
+"".join(['a','p','p','l','e'])        # "apple"  — common way to build a string from a list of chars
 ```
 
 **Replacing:**
