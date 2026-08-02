@@ -31,9 +31,9 @@ s = "Hello World"
 s[0]        # 'H'  -----> s.__getitem() this is dunder function which get called when we do sliciing   so s[i] = s.__getitem__(i)
 s[-1]       # 'd'  (negative index = from end)
 s[0:5]      # 'Hello'
-s[:5]       # same as above   default 0 as start index
+s[:5]       # same as above  default 0 as start index
 s[6:]       # 'World'      default end +1  as ending
-s[:]        # full copy
+s[:]        # full copy to new variable
 s[::2]      # every 2nd char -> 'HloWrd'
 s[::-1]     # reversed string -> 'dlroW olleH'
 s[-3:]      # last 3 chars -> 'rld'
@@ -53,8 +53,8 @@ So `s[::-1]` effectively means: "start at the last element, and walk backward to
 
 **Case:**
 ```python
-s.lower()        # "hello world"
-s.upper()        # "HELLO WORLD"
+s.lower()        # "hello world"  # all to lowercase
+s.upper()        # "HELLO WORLD"  # all to uppercase
 s.title()        # "Hello World"  # capitalize first character of each word
 s.capitalize()   # "Hello world"  # capitalize only first character of first word
 s.swapcase()     # "hELLO wORLD"  # converts all uppercase characters in a string to lowercase and all lowercase characters to uppercase.
@@ -65,6 +65,7 @@ s.swapcase()     # "hELLO wORLD"  # converts all uppercase characters in a strin
 "  hi  ".strip()    # "hi"   — both sides
 "  hi  ".lstrip()   # "hi  " — left only
 "  hi  ".rstrip()   # "  hi" — right only
+
 #EX.
 str = "299$"
 str1 = str.rstrip("$")
@@ -91,6 +92,7 @@ s.endswith("ld")
 "".join(['a','p','p','l','e'])        # "apple"  — common way to build a string from a list of chars
 ```
 **Sorting** 
+
 ```python
 sorted("dcba")    #---> returns list of soretd letters
 ```
@@ -128,6 +130,7 @@ name, age = "Sam", 25   #%s =placeholder for string ,%d =placeholder for digit
 "                # repr() version, adds quotes: 'Sam'
 
 #Format Specifiers
+
 Specifier	Meaning
 %s	        String
 %d        	Integer (decimal)
