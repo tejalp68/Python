@@ -205,6 +205,8 @@ Strings compare lexicographically (character by character, using ASCII/Unicode v
 
 
 **Common escape sequences in Python:**
+
+
 |  Escape  |  Meaning  |
 |----------|-----------|
 |\n	|Newline (line break)
@@ -222,6 +224,7 @@ Strings compare lexicographically (character by character, using ASCII/Unicode v
 |\uXXXX	|Unicode character (4 hex digits)
 |\UXXXXXXXX	|Unicode character (8 hex digits)
 |\xXX	|Character by hex value (2 hex digits)
+
 
 ```python
 
