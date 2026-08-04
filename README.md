@@ -5,9 +5,9 @@
 ---
 **Python Roadmap (Interview/DSA focused)**
 
-1. Variables, data types, type casting
-2. Operators (arithmetic, comparison, logical, bitwise)
-3. Strings (methods, slicing, formatting)
+1. Variables, data types, type casting ✔️
+2. Operators (arithmetic, comparison, logical, bitwise)✔️
+3. Strings (methods, slicing, formatting)✔️
 4. Lists, tuples (methods, slicing, comprehensions)
 5. Dictionaries & Sets
 6. Conditionals (if/elif/else)
