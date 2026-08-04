@@ -1,4 +1,4 @@
-# Variables, Data Types & Type Casting
+# Variables, Data Types & Type Casting ✅
 
 ## 1. Variables
 
