@@ -3,6 +3,26 @@
 *Covers: Programming in Python, Data Structures, Searching, Sorting, Graph Theory — as per GATE DA official syllabus*
 
 ---
+**Python Revision Roadmap (Interview/DSA focused)**
+
+1. Variables, data types, type casting
+2. Operators (arithmetic, comparison, logical, bitwise)
+3. Strings (methods, slicing, formatting)
+4. Lists, tuples (methods, slicing, comprehensions)
+5. Dictionaries & Sets
+6. Conditionals (if/elif/else)
+7. Loops (for, while, break/continue, else on loops)
+8. Functions (args, *args/**kwargs, default/keyword args, scope)
+9. Lambda, map/filter/reduce
+10. List/dict/set comprehensions (deeper)
+11. Exception handling (try/except/finally, custom exceptions)
+12. OOP (classes, inheritance, polymorphism, dunder methods)
+13. File handling
+14. Iterators & Generators
+15. Decorators
+16. Recursion
+17. Common built-in modules for DSA (collections, heapq, itertools, math)
+18. Time & space complexity basics (Big-O) as it applies to Python structures
 
 ## 1. Python Basics & Syntax
 
