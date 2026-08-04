@@ -3,7 +3,7 @@
 *Covers: Programming in Python, Data Structures, Searching, Sorting, Graph Theory — as per GATE DA official syllabus*
 
 ---
-**Python Revision Roadmap (Interview/DSA focused)**
+**Python Roadmap (Interview/DSA focused)**
 
 1. Variables, data types, type casting
 2. Operators (arithmetic, comparison, logical, bitwise)
@@ -155,6 +155,7 @@ Default arguments are evaluated **once**, at function definition time, not each 
 Local → Enclosing → Global → Built-in (search order for name resolution).
 - `global` keyword: modify a global variable inside a function.
 - `nonlocal` keyword: modify a variable in an enclosing (non-global) scope, used in nested functions/closures.
+
 
 ```python
 def outer():
