@@ -521,8 +521,8 @@ def dijkstra(graph, start):
 
 ## Quick Revision Checklist
 
-- [ ] Indexing & slicing (positive/negative, step)
-- [ ] Operator precedence, floor division/modulo with negatives
+- [✔️] Indexing & slicing (positive/negative, step)
+- [✔️] Operator precedence, floor division/modulo with negatives
 - [ ] Mutable default argument trap
 - [ ] LEGB scope, global/nonlocal
 - [ ] Shallow vs deep copy
