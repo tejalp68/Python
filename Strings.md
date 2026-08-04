@@ -1,4 +1,4 @@
-# Strings
+# Strings ✅
  
 ## 1. What strings are in Python
 
