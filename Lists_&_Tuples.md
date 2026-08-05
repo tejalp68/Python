@@ -3,7 +3,7 @@
 ## Lists — the workhorse of Python DSA
 
 ```python
-lst = [1, 2, 3, "four", 5.0]   # can hold mixed types
+lst = [1, 2, 3, "four", 5.0]   # can hold mixed data types 
 empty = []
 empty2 = list()
 ```
@@ -26,8 +26,8 @@ lst[::2]      # [10, 30, 50]
 lst = [1, 2, 3]
 
 lst.append(4)        # [1, 2, 3, 4] — add to end
-lst.insert(1, 99)    # [1, 99, 2, 3, 4] — insert at index
-lst.extend([5, 6])   # [1, 99, 2, 3, 4, 5, 6] — merge another list in
+lst.insert(1, 99)    # [1, 99, 2, 3, 4] — insert at index #will add 99 at index 1
+lst.extend([5, 6])   # [1, 99, 2, 3, 4, 5, 6] — merge another list in add two list together
 lst.remove(99)       # removes first occurrence of value (ValueError if not found)
 lst.pop()            # removes & returns LAST element
 lst.pop(0)           # removes & returns element at index 0
