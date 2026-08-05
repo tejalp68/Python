@@ -8,7 +8,7 @@ empty = []
 empty2 = list()
 ```
 
-**Lists are mutable** — you can change, add, remove elements in place.
+**Lists are [mutable]** — you can change, add, remove elements in place.
 
 ### Indexing & Slicing (same rules as strings)
 ```python
@@ -35,8 +35,8 @@ lst.index(3)         # returns index of first occurrence of value
 lst.count(2)          # count occurrences of value
 lst.sort()            # sorts in place (returns None!)
 lst.sort(reverse=True) # descending
-lst.reverse()          # reverses in place
-lst.clear()             # empties the list
+lst.reverse()          # reverses in place #no need to store anywhere(will directly make change to the original list)
+lst.clear()             # empties the list 
 lst.copy()               # shallow copy
 ```
 
