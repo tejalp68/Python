@@ -60,4 +60,29 @@ for i, v in enumerate(lst):
     print(i, v)
 ```
 
+## Tuples — the immutable sibling
+
+```python
+t = (1, 2, 3)
+single = (5,)        # note the comma — without it, (5) is just an int!
+empty = ()
+```
+
+**Tuples are immutable** — no append, remove, sort, etc. Once created, contents can't change.
+
+```python
+t = (1, 2, 3)
+t[0] = 99   # TypeError
+```
+
+### Why use tuples over lists?
+- Faster than lists (less overhead)
+- Immutability means they're **hashable** — can be used as dictionary keys or set elements (lists can't be)
+- Signals intent: "this data shouldn't change"
+
+```python
+locations = {(0, 0): "origin", (1, 1): "point A"}   # tuple as dict key — works
+locations2 = {[0, 0]: "origin"}                        # TypeError — list not hashable
+```
+
 ---
