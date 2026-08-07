@@ -1,6 +1,4 @@
-# Dictionaries & Sets
-
-## Dictionaries
+# Dictionaries
 
 ### What a dictionary is
 
