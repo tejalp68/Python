@@ -162,10 +162,121 @@ x is y   # False (usually — outside cache range)
 
 ---
 
-## Quick Self-Check
+Questions to practice
+Here's a clean list of questions on **Variables** and **Truthy/Falsy** in Python:
 
-```python
-print(bool([]) or bool("0")) #---->True
-```
+### Variables
 
-_(Work it out using the truthy/falsy rules above before checking an answer.)_
+1. Create a variable `name` and assign your name to it, then print it.
+2. Create two variables `a` and `b` with values `10` and `20`. Swap their values without using a third variable.
+3. Store your age in a variable and print it using an f-string.
+4. What is the output?
+   ```python
+   x = 5
+   x = x + 1
+   print(x)
+   ```
+5. Assign the same value `100` to three variables `a`, `b`, `c` in a single line.
+6. What's the difference between `x = y = 10` and `x, y = 10, 10`?
+7. Given `a, b = 5, 10`, swap their values in one line.
+8. What is the output?
+   ```python
+   x = 10
+   y = x
+   x = 20
+   print(y)
+   ```
+9. Why does this code cause an error?
+   ```python
+   print(z)
+   z = 5
+   ```
+10. What data type does Python assign to each of these?
+    ```python
+    a = 10
+    b = 10.5
+    c = "10"
+    d = True
+    e = None
+    ```
+11. Which of these are valid variable names: `1number, _value, my-var, class, total_sum, $price`? Explain.
+12. What's the difference between `Name`, `name`, and `NAME` as variable names?
+13. What is the output?
+    ```python
+    a = [1, 2, 3]
+    b = a
+    b.append(4)
+    print(a)
+    ```
+14. Use `type()` to check the data type of a list, a tuple, and a dictionary.
+15. What is the output?
+    ```python
+    x = 5
+    def change():
+        x = 10
+        print(x)
+    change()
+    print(x)
+    ```
+16. Convert the string `"123"` into an integer and add `7` to it.
+17. Demonstrate Python's dynamic typing with an example where one variable holds different data types over time.
+18. Using `id()`, explain why `a = 5; b = 5` may give `id(a) == id(b)`, but `a = [1,2]; b = [1,2]` does not.
+
+### Truthy / Falsy
+
+19. List all the values in Python that are considered **falsy**.
+20. What is the output?
+    ```python
+    if []:
+        print("Yes")
+    else:
+        print("No")
+    ```
+21. What is the output?
+    ```python
+    if "0":
+        print("Truthy")
+    else:
+        print("Falsy")
+    ```
+22. Is `0.0` truthy or falsy? Verify with code.
+23. What is the output?
+    ```python
+    values = [0, 1, "", "hello", None, [], [0], {}, False, True]
+    for v in values:
+        print(v, "->", bool(v))
+    ```
+24. Why is `"False"` (as a string) truthy even though it represents the word "False"?
+25. What is the output?
+    ```python
+    x = 10
+    print(bool(x))
+    print(bool(-5))
+    print(bool(0))
+    ```
+26. What is the output?
+    ```python
+    a = []
+    b = {}
+    c = ()
+    print(bool(a), bool(b), bool(c))
+    ```
+27. Predict the output:
+    ```python
+    if None:
+        print("A")
+    elif 0:
+        print("B")
+    elif "":
+        print("C")
+    else:
+        print("D")
+    ```
+28. What does `bool(float("nan"))` return? Is `nan` truthy or falsy?
+29. Write a function `is_empty(value)` that uses truthy/falsy logic to check if a value is "empty" (works for strings, lists, dicts, numbers).
+30. What is the output, and why?
+    ```python
+    print(bool("False"))
+    print(bool("0"))
+    print(bool(" "))
+    ```
