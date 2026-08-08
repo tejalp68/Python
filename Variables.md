@@ -223,19 +223,19 @@ print(a,b)
    x = 10
    y = x
    x = 20
-   print(y) ---->
+   print(y) ----> 10
    ```
 9. Why does this code cause an error?
    ```python
-   print(z)
-   z = 5
+   print(z) #z should be declared before printing
+   z = 5   #because the variable is declared after print line
    ```
 10. What data type does Python assign to each of these?
     ```python
-    a = 10
-    b = 10.5
-    c = "10"
-    d = True
+    a = 10   #int
+    b = 10.5  #float
+    c = "10"   #string
+    d = True   #bool
     e = None
     ```
 11. Which of these are valid variable names: `1number, _value, my-var, class, total_sum, $price`? Explain.
