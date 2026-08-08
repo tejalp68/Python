@@ -168,23 +168,62 @@ Here's a clean list of questions on **Variables** and **Truthy/Falsy** in Python
 ### Variables
 
 1. Create a variable `name` and assign your name to it, then print it.
+
+```python
+name ="Tejal"
+print(name)
+```
+
 2. Create two variables `a` and `b` with values `10` and `20`. Swap their values without using a third variable.
+
+```python
+a =10
+b=20
+b,a=a,b
+
+print(a,b)
+```
+
 3. Store your age in a variable and print it using an f-string.
+
+```python
+age = 21
+print(f"my age is {age}")
+```
+
 4. What is the output?
    ```python
    x = 5
    x = x + 1
-   print(x)
+   print(x) ---> 6
    ```
 5. Assign the same value `100` to three variables `a`, `b`, `c` in a single line.
+
+```python
+a,b,c=100,100,100
+print(a,b,c)
+
+or
+a=b=c =100
+print(a,b,c)
+```
+
 6. What's the difference between `x = y = 10` and `x, y = 10, 10`?
+
 7. Given `a, b = 5, 10`, swap their values in one line.
+
+```python
+a, b = 5, 10
+a,b=b,a
+print(a,b)
+```
+
 8. What is the output?
    ```python
    x = 10
    y = x
    x = 20
-   print(y)
+   print(y) ---->
    ```
 9. Why does this code cause an error?
    ```python
