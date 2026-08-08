@@ -29,7 +29,7 @@ first, *rest = [1, 2, 3, 4]     # first=1, rest=[2,3,4]
 
 ---
 
-## 6. Truthy / Falsy — Full List
+## Truthy / Falsy — Full List
 
 Falsy values: `False`, `None`, `0`, `0.0`, `0j`, `""`, `[]`, `()`, `{}`, `set()`, `range(0)`
 
@@ -42,7 +42,7 @@ if my_list:        # instead of len(my_list) > 0
 
 ---
 
-## 7. `is` vs `==` (very commonly asked)
+## `is` vs `==` (very commonly asked)
 
 ```python
 a = [1, 2, 3]
