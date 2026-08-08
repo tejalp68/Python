@@ -240,6 +240,7 @@ print(a,b)
     ```
 11. Which of these are valid variable names: `1number, _value, my-var, class, total_sum, $price`? Explain.
 12. What's the difference between `Name`, `name`, and `NAME` as variable names?
+
 13. What is the output?
     ```python
     a = [1, 2, 3]
